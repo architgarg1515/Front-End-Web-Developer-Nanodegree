@@ -15,6 +15,7 @@ It continued with explaining [CSS units](https://developer.mozilla.org/en-US/doc
 
 ## Solution
 Used the appropriate CSS rules to style the document in accordance with the design mockup and validated it in W3C Validator.
+Update: Added viewport and media queries for making the website more responsive.
 
 ## Closure
 The solution met the specifications.
