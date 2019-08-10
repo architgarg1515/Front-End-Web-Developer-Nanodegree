@@ -19,5 +19,7 @@ An explanation of how the browser interprets and create the DOM tree from the HT
 ## Solution
 Defined the DOCTYPE and the character set. Used the appropriate HTML elements based on the design mockup to structure the document and validated it in W3C Validator. 
 
+Update: CSS & Responsive design added to the blog post.
+
 ## Closure
 The solution met the specifications.
