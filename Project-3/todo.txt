@@ -1,0 +1,67 @@
+1. contained scrolling in tables
+ in html
+<div class=contained_table>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> ....
+
+</div>
+in css div.contained_table {
+width:100%;
+overflow-x: auto;
+}
+
+2. font_sizes {
+font-size:16px
+line-height:1.2em
+}
+
+3. minor breakpoints - adjust margins/padding, increasing font-size, 
+
+4. patterns
+-col drop
+div class container
+{
+class box dark_blue ... }
+.container{display:flex; flex-wrap:flex;}
+.box{width:100%;}
+@media screen and (min-width:450px){.dark_blue{width:25%;} .light_blue{width:75%;}}
+-mostly fluid
+@media screen and (min-width:700px){.container{width:700px; margin-left:auto;margin-right:auto;}}
+-layout shifter 
+provide order attribute, use id and class
+-off canvas
+<nav id=drawer class dark_blue></nav>
+<main class=light_blue> </main>
+html, body, main{height:100%; width:100%;}
+nav {width:300px; ht:100%; position:absolute; transform:translate(-300px,0);transition:transform 0.3s ease;}
+nav.open{transform:translate(0,0)}
+
+@media screen and (min-width:600px){
+nav{pos:relative;transform:translate(0,0);}
+body{display:flex; flex-flow:row nowrap;}
+main{width:auto;flex-grow:1;}
+
+5. grids layout
+class = wrapper
+.wrapper{display:grid;}
+
+6. flex layout
+.container{display:flex;}
+add flex-wrap:wrap; to move boxes to next row
+add order attribute 0 highest priority
+
+7. for responsive design: viewport devicewidth intial scale, 
+media queries and breakpoints, using percentages intead of fixed  sizes
+
+8. css styling - border, box shadow, change color, margins, font, backgroung color 
+http://davidventuri.com/
