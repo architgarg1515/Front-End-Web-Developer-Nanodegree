@@ -10,15 +10,29 @@
 
 <body>
   <div class="container">
+    <nav id="drawer" class="dark_blue">
+      <h2>Off Canvas</h2>
+      <p>Click outside the drawer to close</p>
+    </nav>
+
     <div class="box header_box">
       <div class="logo">
         <img class="profile_pic" src="images/profile_pic.jpg" alt="Profile Picture">
       </div>
+
       <div class="name_box"><h1 class="name">Archit Garg</h1></div>
-      
+
+      <div class="menu_icon">
+        <a id="menu" class="border-menu"></a>
+      </div>
+
     </div>
 
-    <div class="box body_box"></div>
+    <div class="box body_box">
+      <p class="hashtags">#DataScientist #DataEnthusiast #LifeLongLearner
+      #MobileFilm-Maker #Photographer #Foodie #Chef #FitnessEnthusiast
+      #Traveller #Toronto</p>
+    </div>
 
     <div class="box footer_box">
       <div class="social_media_buttons">
@@ -34,5 +48,23 @@
 
     </div>
   </div>
+
+  <script type="text/javascript">
+
+    /*
+     * Open the drawer when the menu ison is clicked.
+     */
+    var menu = document.querySelector('#menu');
+    var main = document.querySelector('div');
+    var drawer = document.querySelector('#drawer');
+    menu.addEventListener('click', function(e) {
+      drawer.classList.toggle('open');
+      e.stopPropagation();
+    });
+    main.addEventListener('click', function() {
+      drawer.classList.remove('open');
+    });
+
+  </script>
 </body>
 </html>
