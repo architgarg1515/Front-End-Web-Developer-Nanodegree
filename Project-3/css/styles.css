@@ -43,23 +43,108 @@ body, html, div{
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  width: 80%;
+  width: 70%;
   margin: auto;
   padding: auto;
 }
 
 .name {
+  text-align: center;
   font-family: "Comic Sans MS";
-  font-size: calc(4vw + 4vh + 2vmin);
+  font-size: calc(3vw + 4vh + 2vmin);
+  padding: auto;
   margin: auto;
+
 }
 
+.menu_icon {
+  display: flex;
+  flex-direction: row;
+  width: 10%;
+  margin: auto;
+  padding: auto;
+}
+
+.border-menu {
+  margin: auto;
+  padding: auto;
+  content: "";
+  position: relative;
+  top: 0.25em;
+  left: 0;
+  width: 1em;
+  height: 0.125em;
+  border-top: 0.375em double #000;
+  border-bottom: 0.125em solid #000;
+}
+
+.dark_blue {
+  background-color: #2A457A;
+  color: #efefef;
+}
+
+nav {
+  padding: 1em;
+  box-sizing: border-box;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  /* This trasform moves the drawer off canvas. */
+  -webkit-transform: translate(-300px, 0);
+  transform: translate(-300px, 0);
+  /* Optionally, we animate the drawer. */
+  transition: transform 0.3s ease;
+}
+
+nav.open {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+/* If there is enough space (> 600px), we keep the drawer open all the time. */
+@media (min-width: 600px) {
+  /* We open the drawer. */
+  nav {
+    width: 200px;
+    position:relative;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  /* We use Flexbox on the parent. */
+
+  .menu_icon {
+    width: auto;
+    /* Flex-grow streches the main content to fill all available space. */
+    flex-grow: 1;
+  }
+}
+
+
+/* If there is space (> 800px), we keep the drawer open by default. */
+@media (min-width: 800px) {
+  .menu_icon > #menu:after {
+    content: 'The drawer stays open if width > 600px';
+  }
+  .menu_icon, nav {
+    text-decoration: line-through;
+  }
+}
 
 .body_box {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   height: 60%;
+}
+
+.hashtags {
+  margin: auto;
+  padding: auto;
+  width: 40%;
+  display: flex;
+  text-align: center;
+  font-family: "Comic Sans MS";
+  font-size: 0.8em;
 }
 
 .footer_box {
@@ -155,19 +240,16 @@ body, html, div{
     border-radius: 50%;
   }
 
-  .logo {
-    width: 8px;
-  }
 
   .name {
+    text-align: center;
+    padding: auto;
     font-family: "Comic Sans MS";
     font-size: 55px;
     margin: auto;
   }
 
-  .name_box {
-    width: 60%;
-  }
+
 }
 
 @media screen and (min-width: 800px) {
