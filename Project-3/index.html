@@ -38,7 +38,25 @@
       #Traveller #Toronto</p>
     </div>
 
-    <div class="collage_box"></div>
+    <div class="collage_box">
+      <div class="video_box">
+        <iframe src="https://www.youtube.com/embed/videoseries?list=PLAEoMWARNdbuQnxathkSETfVqMPDp0hFV&autoplay=1&loop=1"></iframe>
+      </div>
+
+      <div class="image_box">
+        <img class="mySlides showing" src="slideshow/1.jpeg">
+        <img class="mySlides" src="slideshow/2.jpeg">
+        <img class="mySlides" src="slideshow/3.jpeg">
+        <img class="mySlides" src="slideshow/4.jpeg">
+        <img class="mySlides" src="slideshow/5.jpeg">
+        <img class="mySlides" src="slideshow/6.jpeg">
+        <img class="mySlides" src="slideshow/7.jpeg">
+        <img class="mySlides" src="slideshow/8.jpeg">
+        <img class="mySlides" src="slideshow/9.jpeg">
+        <img class="mySlides" src="slideshow/10.jpeg">
+        <img class="mySlides" src="slideshow/11.jpeg">
+      </div>
+    </div>
 
     <div class="box footer_box">
       <div class="social_media_buttons">
@@ -74,7 +92,15 @@
       drawer.classList.remove('open');
     });
 
+    var slides = document.querySelectorAll('.mySlides');
+    var currentSlide = 0;
+    var slideInterval = setInterval(nextSlide,2000);
 
+    function nextSlide() {
+        slides[currentSlide].className = 'mySlides';
+        currentSlide = (currentSlide+1)%slides.length;
+        slides[currentSlide].className = 'mySlides showing';
+    }
 
   </script>
 </body>
