@@ -24,9 +24,8 @@ body, html, div{
   display: none;
   height: 0%;
   width: 0%;
-  background-color: darkred;
-  color: darkblue;
  }
+
 
 
 .header_box {
@@ -279,25 +278,144 @@ nav.open {
     display: none;
     content: none;
   }
+
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1400px) {
 
   .collage_box {
     position: absolute;
     display: flex;
     flex-wrap: wrap;
-    box-shadow: 1px 1px 8px 3px #888888;
-    box-sizing: content-box;
-    border: 1px solid grey;
+    flex-direction: column;
     margin-top: 25px;
     height: 90%;
-    width: 400px;
-    margin-left: 1100px;
-    background-color: skyblue;
+    width: auto;
+    margin-left: 1075px;
 
 
    }
+
+  .video_box {
+    width: 300px;
+    height: 220px;
+    border: 2px solid black;
+
+  }
+
+  iframe {
+    height: 220px;
+    width: 300px;
+  }
+
+  .image_box {
+    display: block;
+    width: 300px;
+    height: 45%;
+    border: 2px solid black;
+  }
+
+   .mySlides {
+    position: absolute;
+    margin: auto;
+    opacity: 0;
+    z-index: 1;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+    width: 300px;
+    height: 45%;
+   }
+
+   .showing {
+    opacity: 1;
+    z-index: 2;
+}
+}
+
+@media screen and (min-width: 1415px) {
+
+  .video_box {
+    width: 330px;
+    height: 220px;
+    border: 2px solid black;
+
+  }
+
+  iframe {
+    height: 220px;
+    width: 330px;
+  }
+
+  .image_box {
+    display: block;
+    width: 330px;
+    height: 45%;
+    border: 2px solid black;
+  }
+
+
+  .mySlides {
+   position: absolute;
+   margin: auto;
+   opacity: 0;
+   z-index: 1;
+
+   -webkit-transition: opacity 1s;
+   -moz-transition: opacity 1s;
+   -o-transition: opacity 1s;
+   transition: opacity 1s;
+   width: 330px;
+   height: 45%;
+  }
+
+  .showing {
+   opacity: 1;
+   z-index: 2;
+}
+}
+
+@media screen and (min-width: 1450px) {
+
+  .video_box {
+    width: 350px;
+    height: 220px;
+    border: 2px solid black;
+
+  }
+
+  iframe {
+    height: 220px;
+    width: 350px;
+  }
+
+  .image_box {
+    display: block;
+    width: 350px;
+    height: 45%;
+    border: 2px solid black;
+  }
+
+
+  .mySlides {
+   position: absolute;
+   margin: auto;
+   opacity: 0;
+   z-index: 1;
+
+   -webkit-transition: opacity 1s;
+   -moz-transition: opacity 1s;
+   -o-transition: opacity 1s;
+   transition: opacity 1s;
+   width: 350px;
+   height: 45%;
+  }
+
+  .showing {
+   opacity: 1;
+   z-index: 2;
 }
 
 }
