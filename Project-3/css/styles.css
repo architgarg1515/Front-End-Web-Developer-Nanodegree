@@ -89,6 +89,11 @@ body, html, div{
   border-bottom: 0.125em solid #000;
 }
 
+.drawer_links {
+  text-decoration:none;
+  color:white;
+  font-family: "Comic Sans MS";
+}
 .dark_blue {
   background-color: #2A457A;
   color: #efefef;
@@ -232,6 +237,7 @@ nav.open {
     font-size: 55px;
     margin: auto;
   }
+
 
 
 }
