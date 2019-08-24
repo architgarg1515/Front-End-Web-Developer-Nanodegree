@@ -38,7 +38,7 @@ function makeGrid(height, width) {
 
 }
 
-
+//button added to delete canvas
 const clr = document.getElementById('myBtn1');
 clr.addEventListener('click', function (event) {
     event.preventDefault();
@@ -47,6 +47,7 @@ clr.addEventListener('click', function (event) {
     }
 })
 
+//button added to reset canvas and reset the color
 const reset = document.getElementById('myBtn2');
 reset.addEventListener('click', function (event) {
     event.preventDefault();
